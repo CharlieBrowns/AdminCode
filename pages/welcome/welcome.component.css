@@ -1,0 +1,93 @@
+
+.bienvenido  {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    background: var(--azulblanco);
+    height: calc(100vh - 60px);
+
+}
+.bienvenido .bvd__section {
+    background: #fff;
+    width: 350px;
+    height: 500px;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 10px;
+}
+.bienvenido .bvd__section h5 {
+    color: var(--verde);
+    margin-bottom: 20px;
+    
+}
+.bienvenido .bvd__areas > div {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+.bienvenido .bvd__areas > div > div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.bienvenido .bvd__areas .area {
+    border: 1px solid var(--azulgris);
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    border-radius: 10px;
+    margin: 5px;
+}
+.bienvenido .bvd__areas .area:hover {
+    border: 1px solid var(--verde);
+    cursor: pointer;
+    background: var(--verdeclaro);
+}
+
+
+.bienvenido .bvd__areas img {
+    width: 50px;
+}
+.bienvenido .bvd__areas a {
+    text-decoration: none;
+    font-size: 15px;
+    color: var(--verde);
+}
+.bienvenido .bvd__section .bvd__fondo_img {
+    width: 200px;
+    height: 200px;
+    background: var(--azulgris);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    display: none;
+}
+.bienvenido .bvd__section .bvd__img {
+    width: 200px;
+    height: 200px;
+    margin: auto;
+}
+.bienvenido .bvd__section .bvd__img img {
+    width: 100%;
+}
+.bienvenido .bvd__section .bvd__fondo_img span {
+    font-size: 40px;
+    color: var(--gris);
+}
+.bienvenido .bvd__restaurante h1, .bienvenido .bvd__usuario h1{
+    color: var(--gris);
+    font-size: 24px;
+    text-align: center;
+    margin: 10px 0;
+}
+.bienvenido .bvd__restaurante h4, .bienvenido .bvd__usuario h4{
+    color: var(--gris);
+    font-size: 16px;
+    text-align: center;
+    font-weight: normal;
+}

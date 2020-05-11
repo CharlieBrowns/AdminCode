@@ -1,0 +1,53 @@
+
+
+    <div class="log__main">
+        <div class="log__form">
+            <div class="log__form_up log_in">
+                <span>
+                    <i class="fas fa-cloud"></i>
+                </span>
+                <h2>RUNSOCO</h2>
+            </div>
+            <div class="log__form_bot">
+                <div class="formulario">
+                    <form action="" ngNativeValidate #f="ngForm" (submit)="sign_in(f)">
+                        <div class="formulario__input">
+                            <span>Correo electrónico</span>
+                            <div>
+                                <input type="email" [(ngModel)]="email" name="email" required placeholder="Correo Electrónico">
+                            </div>
+                        </div>
+                        <div class="formulario__input">
+                            <span>Contraseña</span>
+                            <div>
+                                <input type="password" ngModel name="password" required placeholder="Contraseña">
+                            </div>
+                        </div>
+                        <div class="formulario__input">
+                            <div>
+                                <label class="container">Recuerdame
+                                    <input type="checkbox" [(ngModel)]="remember" name="remember" [checked]="remember" (change)="remember = !remember">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="formulario__botones">
+                            <div class="boton__send">
+                                <button type="submit">Enviar</button>
+                            </div>
+                        </div>
+                        
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="log__bienvenido">
+            <img src="../../../assets/delivery-man.png" alt="">
+            <div>
+                <h1>Sistema Administrador RUNSOCO <br> <small>para</small> <br>
+                 Restaurantes</h1>
+                <h3>Administra los pedidos de tu restaurante y a tus Courriers</h3>
+            </div>
+        </div>
+    </div>
+

@@ -1,0 +1,11 @@
+<aside class="sidebar" [ngClass]="{'sidebar__hide': progreso }" id="sidebar">
+    <ul>
+        <li routerLinkActive="sidebar__active"><a [routerLink]="['/welcome']"><div><img src="../../../assets/sidebar_logo/welcome.png" alt=""></div><span>Bienvenido</span></a></li>
+        <li routerLinkActive="sidebar__active"><a [routerLink]="['/foods']"><div><img src="../../../assets/sidebar_logo/foods.png" alt=""></div><span>Platillos</span></a></li>
+        <li routerLinkActive="sidebar__active"><a [routerLink]="['/orders']"><div><img src="../../../assets/sidebar_logo/orders.png" alt=""></div><span>Pedidos</span></a></li>
+        <li routerLinkActive="sidebar__active"><a [routerLink]="['/statistics']"><div><img src="../../../assets/sidebar_logo/statistics.png" alt=""></div><span>Estadística</span></a></li>
+        <li routerLinkActive="sidebar__active"><a [routerLink]="['/reports']"><div><img src="../../../assets/sidebar_logo/reports.png" alt=""></div><span>Reportes</span></a></li>
+        <li routerLinkActive="sidebar__active"><a [routerLink]="['/restaurant']"><div><img src="../../../assets/sidebar_logo/restaurant.png" alt=""></div><span>Restaurant</span></a></li>
+        <li ><a (click) = "_userService.logout()"><div><img src="../../../assets/sidebar_logo/logout.png" alt=""></div><span>Salir</span></a></li>
+    </ul>
+</aside>

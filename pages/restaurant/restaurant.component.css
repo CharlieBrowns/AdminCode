@@ -1,0 +1,40 @@
+.restaurant {
+    width: 100%;
+    display: flex;
+}
+.rst__left {
+    width: 60%;
+    padding: 30px;
+}
+.rst__left > div:first-child {
+    height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+} 
+.rst__left > div:first-child div {
+    width: 100%;
+    border: 2px solid var(--verde);
+    height: 70px;
+    background: var(--verdeclaro);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--verde);
+    letter-spacing: 2px;
+}
+.rst__left .rst__datos {
+    overflow: auto;
+    height: calc(100vh - 220px);
+
+}
+
+
+
+.rst__right {
+    width: 40%;
+    height: calc(100vh - 60px);
+    background: var(--azulblanco)
+}
+
+

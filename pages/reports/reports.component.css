@@ -1,0 +1,30 @@
+
+.reportes {
+    width: 100%;
+    display: flex;
+}
+.rpt__filtros {
+    width: 20%;
+    padding: 15px 30px;
+    height: calc(100vh - 60px);
+    background: var(--azulblanco);
+    border-right: 1px solid var(--azulgris);
+}
+.rpt__section .rpt__titulo {
+    border: 1px solid var(--verde);
+    background: var(--verdeclaro);
+    color: var(--verde);
+    letter-spacing: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+}
+.rpt__graficos {
+    width: 80%;
+    height: calc(100vh - 60px);
+    background: #fff;
+}
+
+  
+  

@@ -1,0 +1,134 @@
+.platos {
+    width: 100%;
+}
+
+.plts__left {
+    width: 100%;
+    height: calc(100vh - 60px);
+}
+.plts__left .plts__herramientas {
+    height: 100px;
+    display: flex;
+}
+.plts__left .plts__herramientas .filtros {
+    order: 1;
+    width: 75%;
+}
+.plts__left .plts__herramientas .filtros .buscador {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.plts__left .plts__herramientas .filtros .buscador select {
+    border: none;
+    outline: 0;
+}
+.plts__left .plts__herramientas .filtros .buscador input {
+    padding: 5px 10px;
+    border: 1px solid var(--azulgris);
+    border-radius: 10px;
+    font-size: 14px;
+    outline: 0;
+    height: 30px;
+    width: 700px;
+}
+.plts__left .plts__herramientas .filtros .buscador div {
+    width: 30px;
+    height: 30px;
+    background: var(--rojoblanco);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color: var(--gris);
+    font-size: 14px;
+}
+.plts__left .plts__herramientas .filtros .checkoxs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+} 
+.plts__left .plts__herramientas .filtros .checkoxs div {
+    width: 120px;
+}
+.plts__left .plts__herramientas .crud {
+    order: 2;
+    width: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.plts__left .plts__tabla {
+    height: calc(100vh - 210px);
+}
+.plts__left .plts__paginacion {
+    border-top: 1px solid var(--azulgris);
+    background: var(--azulblanco);
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.plts__right {
+    display: none;
+    
+    
+    width: 40%;
+    height: calc(100vh - 60px);
+    border-left: 1px solid var(--azulblanco);
+
+}
+.plts__right .plts__up {
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--rosablanco);
+}
+.plts__right .plts__bot {
+    padding: 10px;
+    overflow: auto;
+    position: relative;
+    height: calc(100vh - 160px);
+}
+
+
+
+
+@media only screen and (max-width: 1024px) {
+    .plts__left .plts__herramientas .filtros {
+        width: 60%;
+    }
+    .plts__left .plts__herramientas .crud {
+        width: 40%;
+    }
+    .plts__left .plts__herramientas .filtros .buscador input {
+        width: 400px;
+    }
+    
+}
+@media only screen and (max-width: 768px) {
+    .plts__left .plts__herramientas {
+        height: 150px;
+        flex-wrap: wrap;
+    }
+    .plts__left .plts__herramientas .filtros {
+        width: 100%;
+    }
+    .plts__left .plts__herramientas .crud {
+        width: 100%;
+    }
+    .plts__left .plts__tabla {
+        height: calc(100vh - 260px);
+    }
+    .plts__left .plts__herramientas .filtros .buscador input {
+        width: 350px;
+    }
+}
+  
+  

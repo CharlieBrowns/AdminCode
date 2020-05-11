@@ -1,0 +1,7 @@
+<div class="pagination">
+    <a (click)="changePage(1)"><span><i class="fas fa-caret-left"></i></span><span><i class="fas fa-caret-left"></i></span></a>
+    <a (click)="changePage(selected -1)" ><span><i class="fas fa-caret-left"></i></span></a>
+    <a *ngFor="let page of pages" (click)="changePage(page)" [ngClass]="{'pag__active': page === selected }" >{{page}}</a>
+    <a (click)="changePage(selected + 1)"><span><i class="fas fa-caret-right"></i></span></a>
+    <a (click)="changePage(pages.length)"><span><i class="fas fa-caret-right"></i></span><span><i class="fas fa-caret-right"></i></span></a>
+</div>

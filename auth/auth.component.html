@@ -1,0 +1,21 @@
+<header>
+    <h4>Bytecode</h4>
+    <input type="checkbox" id="log__btn_menu">
+    <label for="log__btn_menu">
+        <span><i class="fas fa-bars"></i></span>
+    </label>
+    <nav class="log__menu">
+        <ul>
+            <li routerLinkActive="log__menu_active"><a [routerLink]="['/login']">Iniciar Sesión</a></li>    
+            <li routerLinkActive="log__menu_active"><a [routerLink]="['/register']">Registrar</a></li>
+            <li routerLinkActive="log__menu_active"><a [routerLink]="['/contact']">Contactar</a></li>
+            <li routerLinkActive="log__menu_active"><a [routerLink]="['/help']">Ayuda</a></li>
+        </ul>
+    </nav>
+</header>
+<main>
+    <router-outlet></router-outlet>
+</main>
+<footer>
+    <a href="">Diseñado por @ByteCode - 2019</a>
+</footer>

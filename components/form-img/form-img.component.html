@@ -1,0 +1,31 @@
+<div class="form__img">
+    <div class="form__noImg" *ngIf="!temporaryImage">
+        <label for="nopic">
+            <div>
+                <span><i class="fas fa-camera"></i></span>
+            </div>
+            <input id="nopic" type="file" (change)="selectImg($event.target.files[0])" >
+        </label>
+    </div> 
+    <div class="form__siImg" *ngIf="temporaryImage">
+        <img [src]="temporaryImage" alt="" class="w150">
+        <div class="remove__big_img">
+            <span (click)="removeImg(imgs.length)"><i class="fas fa-trash"></i></span>
+        </div>
+    </div>
+</div>
+<div class="form__imgs">
+    <div class="form__mini_img" *ngFor="let img of imgs; index as i">
+        <img *ngIf="img.indexOf('data:image/') === 0" [src]="img" alt="">
+        <img *ngIf="img.indexOf('data:image/') !== 0"  src="../../../assets/foods/{{img}}" alt="">
+
+        <div class="remove__img">
+            <span (click)="removeImg(i)"><i class="fas fa-trash"></i></span>
+        </div>
+    </div>
+
+    <div class="form__add_img" (click) = "addImg()">
+        <span ><i class="fas fa-plus"></i></span>
+    </div> 
+    
+</div>

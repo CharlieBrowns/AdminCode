@@ -1,0 +1,151 @@
+<div class="platos">
+    <div class="plts__left">
+        <div class="plts__herramientas">
+            <div class="crud">
+                <!-- main__button_active -->
+                <button class="main_button green" [ngClass] = "{'main__button_active': activatedButtons[0]}" (click)="newFood(0)"><span><i class="fas fa-plus"></i></span></button>
+                <button class="main_button blue"  [ngClass] = "{'main__button_active': activatedButtons[1]}" (click)="editFood(1)"><span><i class="fas fa-pencil-alt"></i></span></button>
+                <button class="main_button red"   [ngClass] = "{'main__button_active': activatedButtons[2]}" (click)="removeFood(2)"><span><i class="fas fa-trash"></i></span></button>
+            </div>
+            <div class="filtros">
+                <div class="buscador">
+                    <select name="" id="">
+                        <option value="">Buscar por</option>
+                        <option value="">Nombre</option>
+                        <option value="">Tipo</option>
+                        <option value="">Duración</option>
+                    </select>
+                    <input type="text" placeholder="Ingrese platillo a buscar">
+                    <div>
+                        <span><i class="fas fa-search"></i></span>
+                    </div>
+                </div>
+                <div class="checkoxs">
+                    <div>
+                        <label class="container">Combos
+                            <input type="checkbox" checked="checked">
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="plts__tabla tabla__scrollbar">
+           <table class="tabla">
+              <thead>
+                    <tr>
+                        <th>ITEM</th>
+                        <th>NOMBRE</th>
+                        <th>PRECIO</th>
+                        <th>TIPO</th>
+                        <th>DURACIÓN</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr  *ngFor="let food of foods; index as i" [ngClass]="{'tr__active': i === selected }" (click)="select(food.id)">
+                        <td>{{ i + 1 }}</td>
+                        <td>{{food.name}}</td>
+                        <td>{{food.price}}</td>
+                        <td>{{food.type}}</td>
+                        <td>{{food.duration}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="plts__paginacion">
+            <app-pagination (pageSelected)="changePage($event)"></app-pagination>
+        </div>
+    </div>
+
+    <div class="modal_fondo" [ngClass]="{'modal_fondo__off': modal }">
+       <div class="modal">
+           
+        <div class="modal_content">
+            <div class="modal_header">
+                <h5>Agregar nuevo platillo</h5>
+                <button class="normal_button atras" (click)="closeModal()"><span><i class="fas fa-times"></i></span></button>
+            </div>
+            <div class="modal_body">
+                <div class="formulario">
+                <form action="" #f = "ngForm" ngNativeValidate (submit) = "save(f)">
+                   <div class="formulario__section">
+                       <div class="form__50">
+                            <app-form-img (fileSelected) = "receiveFiles($event)" (filePos) = "receivePos($event)" [getImgs]="food.image" ></app-form-img>
+                       </div>
+                       <div class="form__50">
+                           <div class="formulario__input">
+                        <span>Nombre</span>
+                        <div>
+                            <input type="text" [ngModel] = "food.name" name="name" required placeholder="Nombre">
+                        </div>
+                    </div>
+                    <div class="formulario__textarea">
+                        <span>Descripción</span>
+                        <div>
+                            <textarea [ngModel] = "food.description"  name="description" required placeholder="Descripción" rows="5"></textarea>
+                        </div>
+                    </div>
+                    <div class="formulario__section">
+                        <div class="formulario__input form__50">
+                            <span>Precio</span>
+                            <div>
+                                <input type="text" [ngModel] = "food.price"  name="price" required placeholder="Precio">
+                            </div>
+                        </div>
+                        <div class="formulario__input form__50">
+                            <span>Duración</span>
+                            <div>
+                                <input type="text" [ngModel] = "food.duration"  name="duration" required placeholder="Duración">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="formulario__select">
+                        <span>Tipo</span>
+                        <div>
+                            <select [ngModel] = "food.type"  name="type" required>
+                                <option value="">Tipo</option>
+                                <option value="">Tipo 1</option>
+                                <option value="">Tipo 2</option>
+                                <option value="">Tipo 3</option>
+                                <option value="">Tipo 4</option>
+                                <option value="">Tipo 5</option>
+
+                            </select>
+                        </div>
+                    </div>
+                    <div class="formulario__input">
+                        <span>Calificación</span>
+                        <div>
+                            <input type="text" [ngModel] = "food.calification"  name="calification" required placeholder="Calificación">
+                        </div>
+                    </div>
+                    <div class="formulario__select">
+                        <span>Estado</span>
+                        <div>
+                            <select [ngModel] = "food.state"  name="state" required>
+                                <option value="">Estado</option>
+                                <option value="">Habilitado</option>
+                                <option value="">No Habilitado</option>
+
+                            </select>
+                        </div>
+                    </div>
+                    <div class="formulario__botones">
+                        <div class="boton__send">
+                            <button type="submit">Guardar</button>
+                        </div>
+                        <div class="boton__cancel">
+                            <button type="submit">Cancelar</button>
+                        </div>
+                    </div>
+                       </div>
+                   </div>
+                    
+                </form> 
+            </div>
+            </div>
+        </div>
+        </div>
+    </div> 
+
+</div>

@@ -1,0 +1,202 @@
+
+.pedidos {
+    width: 100%;
+}
+.pdds__up {
+    width: 100%;
+    height: 100px;;
+    border-bottom: 1px solid var(--azulgris);
+}
+.pdds__up .pdds__herramientas {
+    height: 100px;
+    width: 100%;
+    display: flex;
+}
+.pdds__up .pdds__herramientas .filtros {
+    order: 1;
+    width: 75%;
+}
+.pdds__up .pdds__herramientas .filtros .buscador {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.pdds__up .pdds__herramientas .filtros .buscador select {
+    border: none;
+    outline: 0;
+}
+.pdds__up .pdds__herramientas .filtros .buscador input {
+    padding: 5px 10px;
+    border: 1px solid var(--borderInput);
+    border-radius: 10px;
+    font-size: 14px;
+    outline: 0;
+    height: 30px;
+    width: 400px;
+}
+.pdds__up .pdds__herramientas .filtros .buscador div {
+    width: 30px;
+    height: 30px;
+    background: var(--rojoblanco);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color: var(--gris);
+    font-size: 14px;
+}
+.pdds__up .pdds__herramientas .filtros .checkoxs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+} 
+.pdds__up .pdds__herramientas .filtros .checkoxs div {
+    width: 120px;
+}
+.pdds__up .pdds__herramientas .crud {
+    order: 2;
+    width: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pdds__bot {
+    background: var(--azulgris);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.pdds__bot .pdds__etapa {
+    width: 33%;
+    background: var(--azulblanco)
+}
+.pdds__bot .pdds__etapa .pdds__titulo {
+    padding: 20px;
+}
+.pdds__bot .pdds__etapa .pdds__titulo div {
+    margin: auto;
+    width: 250px;
+    height: 40px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+.pdds__bot .pdds__etapa .pdds__pedido {
+    background: #fff;
+    width: 350px;
+    margin: auto;
+    border-radius: 5px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+    margin-bottom: 10px;
+}
+.pdds__bot .pdds__etapa .pdds__pedidos {
+        height: calc(100vh - 240px);
+
+}
+.pdds__bot .pdds__etapa .pdds__pedido .pdds__p_header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 10px 5px;
+    border-bottom: 1px solid var(--azulgris);
+    align-items: center;
+    font-size: 15px;
+    font-weight: bold;
+    color: var(--gris);
+}
+.pdds__bot .pdds__etapa .pdds__pedido .pdds__p_body {
+        padding: 5px 10px;
+}
+.pdds__bot .pdds__etapa .pdds__pedido .pdds__p_body ul {
+    list-style: none;
+    font-size: 15px;
+    color: var(--gris);
+}
+.pdds__bot .pdds__etapa .pdds__pedido .pdds__p_footer {    
+    display: flex;   
+}
+.pdds__bot .pdds__etapa .pdds__pedido .pdds__p_footer div {
+    width: 50%;
+    font-size: 14px;
+    padding: 5px 10px 10px;
+    color: var(--gris);
+
+}
+.pdds__bot .pdds__etapa .pdds__pedido .pdds__p_footer div:first-child {
+    border-right: 2px solid var(--azulgris);
+}
+.pdds__bot .pdds__etapa .pdds__pedido .pdds__p_footer strong {
+    font-size: 13px;
+} 
+
+
+.pdds__bot .pdds__espera .pdds__titulo div {
+    border: 2px solid var(--rojo);
+    background: rgba(220,53,69,0.1);
+    color: var(--rojo);
+}
+.pdds__bot .pdds__proceso .pdds__titulo div {
+    border: 2px solid var(--azul);
+    background: rgba(0,123,255,0.1);
+    color: var(--azul);
+}
+.pdds__bot .pdds__preparado .pdds__titulo div {
+    border: 2px solid var(--verde);
+    background: rgba(236,348,245,1);
+    color: var(--verde);
+}
+.pdds__bot .pdds__espera .pdds__p_footer{
+    background: rgba(220,53,69,0.1);
+}
+.pdds__bot .pdds__proceso .pdds__p_footer{
+    background: rgba(0,123,255,0.1);
+}
+.pdds__bot .pdds__preparado .pdds__p_footer{
+    background: rgba(236,348,245,1);
+}
+
+
+
+
+@media only screen and (max-width: 1024px) {
+    .pdds__up .pdds__herramientas .filtros {
+        width: 60%;
+    }
+    .pdds__up .pdds__herramientas .crud {
+        width: 40%;
+    }
+    .pdds__up .pdds__herramientas .filtros .buscador input {
+        width: 400px;
+    }
+    .pdds__bot .pdds__etapa .pdds__pedido {
+        width: 250px;
+    }
+    
+}
+
+@media only screen and (max-width: 768px) {
+    .pdds__up .pdds__herramientas .filtros {
+        width: 75%;
+    }
+    .pdds__up .pdds__herramientas .crud {
+        width: 25%;
+    }
+    .pdds__bot {
+        height: calc(100vh - 210px);
+    }
+    .pdds__up .pdds__herramientas .filtros .buscador input {
+        width: 350px;
+    }
+    .pdds__bot .pdds__etapa .pdds__titulo div {
+        width: 150px;
+    }
+    .pdds__bot .pdds__etapa .pdds__pedido {
+        width: 200px;
+    }
+}
+

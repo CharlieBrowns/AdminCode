@@ -1,0 +1,7 @@
+<app-header  (sidebarToggle)="progreso1 = $event"></app-header>  
+<main>
+    <app-sidebar [progreso]="progreso1" ></app-sidebar>
+    <section style="width: 100%;">
+        <router-outlet></router-outlet>
+    </section>
+</main>

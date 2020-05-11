@@ -1,0 +1,54 @@
+
+
+.log__main {
+    background: linear-gradient(#22B56E, #115B37);
+    width: 100%;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+.log__main .log__bienvenido {
+    order: 1;
+    display: flex;
+    align-items: center;
+}
+.log__main .log__bienvenido img {
+    width: 250px;
+    height: 250px;
+}
+
+.log__main .log__bienvenido h1, .log__main .log__bienvenido h3 {
+    color: #fff;
+}
+.log__main .log__form {
+    order: 2;
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 3px 6px rgba(0,0,0,.5);
+    width: 350px;
+}
+.log__main .log__form .log__form_up {
+    text-align: center;
+}
+.log__main .log__form .log_up {
+    margin-bottom: 50px;
+}
+.log__main .log__form .log_in {
+    margin-bottom: 50px;
+}
+.log__main .log__form .log__form_up span {
+    color: var(--verde); 
+}
+.log__main .log__form .log_up span {
+    font-size: 3em;
+    color: var(--verde); 
+}
+.log__main .log__form .log_in span {
+    font-size: 8em;
+    color: var(--verde); 
+}
+.log__main .log__form .log__form_up h2 {
+    color: var(--gris);
+    letter-spacing: 2px;
+}

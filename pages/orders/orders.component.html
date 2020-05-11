@@ -1,0 +1,177 @@
+<div class="pedidos" >
+    <div class="pdds__up">
+        <div class="pdds__herramientas">
+            <div class="crud">
+                <button class="main_button green main__button_active"><span><i class="fas fa-eye"></i></span></button>
+                <button class="main_button red "><span><i class="fas fa-trash"></i></span></button>
+            </div>
+            <div class="filtros">
+                <div class="buscador">
+                    <select name="" id="">
+                        <option value="">Buscar por</option>
+                        <option value="">Nombre</option>
+                        <option value="">Tipo</option>
+                        <option value="">Duración</option>
+                    </select>
+                    <input type="text" placeholder="Ingrese platillo a buscar">
+                    <div>
+                        <span><i class="fas fa-search"></i></span>
+                    </div>
+                </div>
+                <div class="checkoxs">
+                    <div>
+                        <label class="container">En espera
+                            <input type="checkbox" checked="checked">
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+                    <div>
+                        <label class="container">En proceso
+                            <input type="checkbox" checked="checked">
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="pdds__bot">
+        <div class="pdds__etapa pdds__espera">
+            <div class="pdds__titulo">
+                <div>
+                    En espera
+                </div>
+            </div>
+            <div class="pdds__pedidos scrollbar">
+
+                <div class="pdds__pedido" *ngFor="let a of myOrders">
+                    <div class="pdds__p_header">
+                        <div>
+                            1. Pedido Nro. {{a._id}}
+                        </div>
+                        <div>
+                            <button class="normal_button rojo"><span><i class="fas fa-eye"></i></span></button>
+                        </div>                
+                    </div>
+                    <div class="pdds__p_body">
+                        <ul>
+                            <li>{{a.pedido}}</li>
+                            <!-- <li>Pizza linda maldonada con harina y fideos.</li>
+                            <li>Pizza terminator grande.</li>
+                            <li>Pizza linda loretana con su aguita de coco, ya vuelta, di.</li> -->
+                        </ul>
+                    </div>
+                    <div class="pdds__p_footer">
+                        <div>
+                            <button value="Aceptar" (click)="takeOrder('accepted', a._id)">Aceptar</button>
+                            <!-- <strong>Hora</strong> <br> -->
+                            <!-- {{a.hora}} -->
+                        </div>
+                        <div>
+                            <button value="Rechazar" (click)="takeOrder('denied', a._id)">Rechazar</button>
+                            <!-- <strong>Courrier</strong> <br> -->
+                            <!-- Juan Manuel Delgado Marcos -->
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="pdds__etapa pdds__proceso">
+            <div class="pdds__titulo">
+                <div>
+                    En proceso
+                </div>
+            </div>
+            <div class="pdds__pedidos scrollbar">
+                <div class="pdds__pedido" *ngFor="let b of inProcess">
+                    <div class="pdds__p_header">
+                        <div>
+                            1. Pedido Nro. {{b._id}}
+                        </div>
+                        <div>
+                            <button class="normal_button azul"><span><i class="fas fa-eye"></i></span></button>
+                        </div>                
+                    </div>
+                    <div class="pdds__p_body">
+                        <ul>
+                            <li>{{b.pedido}}</li>
+                        </ul>
+                    </div>
+                    <div class="pdds__p_footer">
+                        <div>
+                            <strong>Hora</strong> <br>
+                            {{b.hora}}
+                        </div>
+                        <div>
+                            <strong>Courrier</strong> <br>
+                            Juan Manuel Delgado Marcos
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="pdds__etapa pdds__preparado">
+            <div class="pdds__titulo">
+                <div>
+                    Preparados
+                </div>
+            </div>
+            <div class="pdds__pedidos scrollbar">
+                <div class="pdds__pedido">
+                    <div class="pdds__p_header">
+                        <div>
+                            1. Pedido Nro. 341
+                        </div>
+                        <div>
+                            <button class="normal_button verde"><span><i class="fas fa-check"></i></span></button>
+                        </div>                
+                    </div>
+                    <div class="pdds__p_body">
+                        <ul>
+                            <li>Pizza linda loretana con su aguita de coco, ya vuelta, di.</li>
+                        </ul>
+                    </div>
+                    <div class="pdds__p_footer">
+                        <div>
+                            <strong>Hora</strong> <br>
+                            04:00 p.m.
+                        </div>
+                        <div>
+                            <strong>Courrier</strong> <br>
+                            Juan Manuel Delgado Marcos
+                        </div>
+                    </div>
+                </div>
+                <div class="pdds__pedido">
+                    <div class="pdds__p_header">
+                        <div>
+                            1. Pedido Nro. 341
+                        </div>
+                        <div>
+                            <button class="normal_button verde"><span><i class="fas fa-eye"></i></span></button>
+                        </div>                
+                    </div>
+                    <div class="pdds__p_body">
+                        <ul>
+                            <li>Pizza linda andahuaylina con harina y tomate.</li>
+                            <li>Pizza linda maldonada con harina y fideos.</li>
+                            <li>Pizza terminator grande.</li>
+                            <li>Pizza linda loretana con su aguita de coco, ya vuelta, di.</li>
+                        </ul>
+                    </div>
+                    <div class="pdds__p_footer">
+                        <div>
+                            <strong>Hora</strong> <br>
+                            04:00 p.m.
+                        </div>
+                        <div>
+                            <strong>Courrier</strong> <br>
+                            Juan Manuel Delgado Marcos
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

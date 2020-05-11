@@ -1,0 +1,71 @@
+
+
+    <div class="log__main">
+        <div class="log__form">
+            <div class="log__form_up log_up">
+                <span>
+                    <i class="fas fa-cloud"></i>
+                </span>
+                <h2>RUNSOCO</h2>
+            </div>
+            <div class="log__form_bot">
+                <div class="formulario">
+                    <form action="" [formGroup] = "form" (ngSubmit) = "sign_up()">
+                        <div class="formulario__input">
+                            <span>Nombre</span>
+                            <div>
+                                <input formControlName="name" type="text" placeholder="Correo Electrónico">
+                                <span *ngIf = "form.get('name').invalid && (form.get('name').dirty || form.get('name').touched)">
+                                    <app-form-error *ngIf="form.controls['name'].errors.required"></app-form-error>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="formulario__input">
+                                <span>Correo Electrónico</span>
+                                <div>
+                                    <input formControlName="email" name="email" type="email" placeholder="Correo Electrónico">
+                                    <span *ngIf="form.get('email').invalid && ( form.get('email').dirty || form.get('email').touched )">
+                                        <app-form-error *ngIf="form.controls['email'].errors.required" ></app-form-error>
+                                        <app-form-error *ngIf="form.controls['email'].errors.email" errorAlert="Correo electrónico incorrecto" ></app-form-error>
+                                    </span>
+                                </div>
+                            </div>
+                        <div class="formulario__input">
+                            <span>Contraseña</span>
+                            <div>
+                                <input formControlName="password" name="password" type="password" placeholder="Contraseña">
+                                <span *ngIf="form.get('password').invalid && ( form.get('password').dirty || form.get('password').touched )">
+                                    <app-form-error *ngIf="form.controls['password'].errors.required" ></app-form-error>  
+                                    <app-form-error *ngIf="form.controls['password'].errors.pattern" errorAlert="Contraseña insegura" ></app-form-error>                                
+                                </span>
+                            </div>
+                        </div>
+                        <div class="formulario__input">
+                                <span>Confirmar Contraseña</span>
+                                <div>
+                                    <input formControlName="password2" name="password2" type="password" placeholder="Contraseña">
+                                    <span *ngIf="form.get('password2').invalid && ( form.get('password2').dirty || form.get('password2').touched )">
+                                        <app-form-error *ngIf="form.controls['password2'].errors.required" ></app-form-error>  
+                                        <app-form-error *ngIf="form.controls['password2'].errors.mismatch" errorAlert="Contraseñas no coinciden"></app-form-error>                                
+                                    </span>
+                                </div>
+                            </div>
+                        <div class="formulario__botones">
+                            <div class="boton__send">
+                                <button type="submit">Enviar</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="log__bienvenido">
+            <img src="../../../assets/delivery-man.png" alt="">
+            <div>
+                <h1>Sistema Administrador RUNSOCO <br> <small>para</small> <br>
+                 Restaurantes</h1>
+                <h3>Administra los pedidos de tu restaurante y a tus Courriers</h3>
+            </div>
+        </div>
+    </div>
+
